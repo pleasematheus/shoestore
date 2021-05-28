@@ -1,11 +1,15 @@
-import React from 'react'
-import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet} from 'react-native'
+import React, { useEffect } from 'react'
+import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native'
+
+import Dot from '../../component/Dot'
 
 export default function Detail({ navigation }) {
 
-	navigation.setOptions({
-		headerTitle: 'Nike Downshifter 10'
-	})
+	useEffect(() => {
+		navigation.setOptions({
+			headerTitle: 'Nike Downshifter 10'
+		})
+	}, [])
 
 	return (
 		<ScrollView style={styles.container}>
@@ -26,6 +30,13 @@ export default function Detail({ navigation }) {
 						Nike Downshifter 10
 					</Text>
 				</View>
+
+				<View style={styles.dotContainer}>
+					<Dot color="#2379F4"/>
+					<Dot color="#FB6E53"/>
+					<Dot color="#DDD"/>
+					<Dot color="#000"/>
+				</View>
 			</View>
 		</ScrollView>
 	)
@@ -41,6 +52,11 @@ const styles = StyleSheet.create({
 		width: '100%'
 	},
 	title: {
-		fontFamily: 'Inter_700Bold'
+		fontFamily: 'Inter_700Bold',
+		paddingHorizontal: '2%'
+	},
+	dotContainer: {
+		flexDirection: 'row',
+		marginVertical: '7%'
 	}
 })
