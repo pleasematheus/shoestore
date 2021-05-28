@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native'
 
 import Dot from '../../component/Dot'
+import ShoesSize from '../../component/ShoesSize'
 
 export default function Detail({ navigation }) {
 
@@ -36,6 +37,15 @@ export default function Detail({ navigation }) {
 					<Dot color="#FB6E53"/>
 					<Dot color="#DDD"/>
 					<Dot color="#000"/>
+				</View>
+
+				<View style={{flexDirection: 'row', width: '100%'}}>
+					<ScrollView horizontal showsHorizontalScrollIndicator={false}>
+						<ShoesSize bgColor="#17181A" color='#FFF'>44</ShoesSize>
+						<ShoesSize>42</ShoesSize>
+						<ShoesSize>39</ShoesSize>
+						<ShoesSize>37</ShoesSize>
+					</ScrollView>
 				</View>
 			</View>
 		</ScrollView>
