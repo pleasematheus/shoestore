@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
 		justifyContent: 'center'
 	},
 	shoesImg: {
+		borderRadius: 25,
 		width: 175,
 		height: 175
 	},

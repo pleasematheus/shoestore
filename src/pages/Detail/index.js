@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native'
+import * as Font from 'expo-font'
 
 import Dot from '../../component/Dot'
 import ShoesSize from '../../component/ShoesSize'
+import Button from '../../component/Button'
+import Footer from '../../component/Footer'
 
 export default function Detail({ navigation }) {
 
@@ -47,6 +50,28 @@ export default function Detail({ navigation }) {
 						<ShoesSize>37</ShoesSize>
 					</ScrollView>
 				</View>
+
+				<View style={styles.textContent}>
+					<Text style={styles.textTitle}>
+						Nike Downshifter 10
+					</Text>
+					<Text style={styles.textContent}>
+						O Tênis Nike Masculino Downshifter 10 traz amortecimento e suporte atualizados, para garantir uma corrida estável e confortável. Esse tênis de corrida é confeccionado em material respirável, cabedal em couro sintético, com mesh no calcanhar, proporciona suporte e circulação de ar, forro acolchoado, entressola em espuma de EVA flexível, garantindo a sensação de amortecimento responsivo durante o treino e solado em borracha para tração durável. O homem que busca resultados e estilo, conta com a Nike para acompanhar nos treinos e no dia a dia.
+					</Text>
+					<Text style={styles.textList}>
+						- Categoria: Amortecimento
+					</Text>
+					<Text style={styles.textList}>
+						- Material: Mesh
+					</Text>
+				</View>
+
+				<Button />
+				
+				<View style={styles.line} />
+				
+				<Footer/>
+
 			</View>
 		</ScrollView>
 	)
@@ -68,5 +93,27 @@ const styles = StyleSheet.create({
 	dotContainer: {
 		flexDirection: 'row',
 		marginVertical: '7%'
+	},
+	textContent: {
+		fontSize: 16,
+		lineHeight: 25,
+		fontFamily: 'Inter_500Medium',
+		marginVertical: '2%',
+		paddingHorizontal: '2%'
+	},
+	textTitle: {
+		fontFamily: 'Inter_500Medium',
+		fontSize: 22,
+		marginVertical: '2%'
+	},
+	textList: {
+		fontFamily: 'Inter_500Medium',
+		fontSize: 16,
+		lineHeight: 25
+	},
+	line: {
+		borderWidth: 1,
+		borderBottomColor: '#DDD',
+		marginVertical: '2%'
 	}
 })
